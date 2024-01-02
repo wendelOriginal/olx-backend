@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Advertase;
+use App\Models\State;
 
 class User extends Authenticatable
 {
@@ -42,4 +44,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function advertase()
+    {
+        return $this->hasMany(Advertase::class);
+    }
+
+    public function state()
+    {
+        return $this->belongsTo(State::class);
+    }
 }

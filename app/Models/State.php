@@ -9,4 +9,14 @@ class State extends Model
 {
     use HasFactory;
     protected $fillabla = ['name', 'slug'];
+
+    public function advertase()
+    {
+        return $this->hasMany(Advertase::class);
+    }
+
+    public function users()
+    {
+        $this->hasMany(User::class);
+    }
 }
