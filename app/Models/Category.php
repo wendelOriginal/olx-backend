@@ -9,7 +9,9 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillabla = ['name', 'slug'];
+    protected $fillable = ['name', 'slug'];
+    public $timestamps = false;
+
     public function advertase()
     {
         return $this->hasMany(Advertase::class);

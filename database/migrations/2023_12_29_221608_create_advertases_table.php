@@ -20,9 +20,9 @@ return new class extends Migration
             $table->decimal('price');
             $table->boolean('isNegotiable');
             $table->text('description')->nullable();
-            $table->foreignId(Category::class);
-            $table->foreignId(State::class);
-            $table->foreignId(User::class);
+            $table->foreignIdFor(Category::class);
+            $table->foreignIdFor(State::class);
+            $table->foreignIdFor(User::class);
             $table->timestamps();
         });
     }

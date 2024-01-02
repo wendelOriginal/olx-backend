@@ -9,7 +9,7 @@ class Advertase extends Model
 {
     use HasFactory;
 
-    protected $fillabla = ['title', 'price', 'isNegotiable', 'description', 'category_id', 'state_id', 'user_id'];
+    protected $fillable = ['title', 'price', 'isNegotiable', 'description', 'category_id', 'state_id', 'user_id'];
     public function category()
     {
         return $this->belongsTo(Category::class);

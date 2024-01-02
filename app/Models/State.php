@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class State extends Model
 {
     use HasFactory;
-    protected $fillabla = ['name', 'slug'];
+    protected $fillable = ['name', 'slug'];
+
+    public $timestamps = false;
 
     public function advertase()
     {

@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId(State::class)->after('password');
+            $table->foreignIdFor(State::class)->after('password');
         });
     }
 
