@@ -21,7 +21,7 @@ Route::post('/user/sigin', [UserController::class, 'sigin']);
 
 Route::post('/user/signup', [UserController::class, 'signup']);
 
-Route::post('/user/me', [UserController::class, 'me']);
+Route::get('/user/me', [UserController::class, 'me']);
 
 /**
  * rota de usuarios
